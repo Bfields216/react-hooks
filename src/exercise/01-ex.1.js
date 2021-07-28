@@ -5,9 +5,9 @@ import * as React from 'react'
 
 
 
-function Greeting(props) {
+function Greeting({initialname = ''}) {
   // 💣 delete this variable declaration and replace it with a React.useState call
-  const [name, setName] = React.useState (props.initialname)
+  const [name, setName] = React.useState (initialname)
 
   function handleChange(event) {
     // 🐨 update the name here based on event.target.value
@@ -19,16 +19,16 @@ function Greeting(props) {
     <div>
       <form>
         <label htmlFor="name">Name: </label>
-        <input onChange={handleChange} id="name" />
+        <input onChange={handleChange} id="name" placeholder={initialname} />
       </form>
-      {name ? <strong>Hello {name}</strong> : 'Go ahead and say something'}
+      {name ? <strong>Hello {name}</strong> : 'Go ahead and say something funny'}
     </div>
   )
 }
 
 function App() {
   return <Greeting 
-    initialname='something'
+    initialname='Anything between A-Z'
   />
   
 }
