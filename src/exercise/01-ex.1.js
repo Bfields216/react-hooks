@@ -28,7 +28,7 @@ function Greeting({initialname = ''}) {
 
 function App() {
   return <Greeting 
-    initialname='Anything between A-Z'
+    initialname='Please write between A-Z '
   />
   
 }

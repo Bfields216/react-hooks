@@ -28,7 +28,7 @@ function Greeting(props) {
 
 function App() {
   return <Greeting 
-    initialname='something'
+    initialname='something......'
   />
   
 }
